@@ -1,0 +1,7 @@
+
+Binary search is an algorithm used to find a target value within a sorted array. It works by repeatedly dividing the search interval in half. Its time complexity is O(log n), making it significantly faster than linear search for large arrays
+
+
+finding mid = (start+end)/2 or 
+avoiding int max min values 
+ mid = s +(e-s) /2

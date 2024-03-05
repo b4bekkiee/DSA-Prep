@@ -1,0 +1,4 @@
+
+Linear search is a basic method of finding an item in a list. It involves checking each element in the list until the desired item is found. The time it takes to complete a linear search increases linearly with the size of the list. In other words, if there are twice as many items, it will likely take about twice as long to find the item.
+
+time  complexity o(n)
