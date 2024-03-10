@@ -32,7 +32,6 @@ int leftOcc (int arr[] ,int n ,int key ) {
      mid = (start + end) / 2 ;
 
      }
-
     return ans ;
 
 
