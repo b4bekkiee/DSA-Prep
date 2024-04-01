@@ -72,7 +72,7 @@ using namespace std ;
 int main() {
 
 
-string str1 = "Toos hot to hoot." ;
+string str1 = "Too) hot to hoot." ;
 if( isPalindrome(str1) ) {
     cout << "The given string is palindrome";
 }

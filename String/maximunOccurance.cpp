@@ -1,79 +1,49 @@
 #include <iostream>
-#include <string>
-
-
-
 using namespace std ;
 
+void rotateArr(int arr[] , int n ) {
 
 
-char alphaNumeric ( char ch ) {
- 
-   if(ch >='a' && ch <= 'z' || ch >= 'A' && ch  <= 'Z' ||  ch >=  'o' && ch <= '9'  ) {
-    return ch ;
+   int start = 0;
+   int end = n-1;
+
+   while(start <= end) {
+  
+   
+   swap(arr[start] ,arr[end] );
+   start++;
+   end--;
+
    }
 
-}
 
-
-
-char toLower(  char ch ) {
-  if(ch >= 'a' && ch <= 'z' ) {
-    return ch ;
-  }
-  else {
-    int temp = ch - 'A' + 'a' ;
-    return temp;
-  }
 
 }
 
-bool palindromeChecker( string str ) {
-
-    int start = 0 ;
-    int end = str.size () - 1; ;
-
-
-   while(start < end) {
-
-
-    if(!alphaNumeric(str[start])) {
-        start++ ;
-    }
-     if(!alphaNumeric(str[end])) {
-        end-- ;
+   void printArr(  int arr[] ,int n  )  {
+    for(int i = 0 ; i < n ;i++) {
+      cout << arr[i];
     }
 
-    if(     toLower(str[start]) !=  toLower(str[end] )  ) {
-        return false ;
-    }
-    else {
-        start ++ ;
-        end -- ;
-    }
    }
-  return true ;
-
-
-
-}
-
 
 int main() {
 
 
 
-  string str = "ma,m" ;
 
-  if(palindromeChecker(str)) {
-    cout << "The given string is palindrome" ;
-  }
-  else {
-    cout <<  "The Given string is not palindome" ;
-  }
-   
+int arr[5] ={1,2,3,4,5 } ;
+int n = 5;
+rotateArr( arr,n) ;
+printArr(arr,n);
 
-  
+
+
+
+
+
+
+
 
 
 }

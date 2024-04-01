@@ -6,27 +6,23 @@ using namespace std ;
     /// not a better solution
   void  rotateArr(  int arr[] ,int n , int k  ) {
          
-
-       int temp[n];
-    
-    // Copy the elements to temp array after rotation
-    for (int i = 0; i < n; i++) {
-        temp[(i + k) % n] = arr[i];
-    }
-     for (int i = 0; i < n; i++) {
-        arr[i] = temp[i];
-    }
-
+ k = k%n;
+   int j = 0 ;
+   int ansArr[5];
+   for(int i = n-k ; i < n ;i++) {
    
-
-}
-
-void printArr(int arr[] ,int n) {
-
+   ansArr[j++] = arr[i] ;
+   }
+   for(int i = 0 ; i <=k ;i++) {
+    ansArr[j++] =arr[i];
+   }
     for(int i =0 ; i  < n ; i++) {
-        cout << arr[i];
+        cout << ansArr[i];
     }
+
 }
+
+
 
 int main() {
 
@@ -36,10 +32,10 @@ int main() {
 
   int arr [5] = {1,2,3,4,5} ;
   int n = 5 ;
-  int k = 3 ;
+  int k = 11 ;
 
   rotateArr(arr,n,k) ;
- printArr(arr,n);
+ 
 
 
 }

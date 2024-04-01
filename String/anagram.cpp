@@ -19,8 +19,8 @@ bool isAnagram(  string str1 ,string str2 ) {
 
     for(int i = 0 ;  i < str1.length() ; i++  ) {
 
-    freq[str1[i] + 'a' ] ++ ;
-    freq[str2[i] + 'a' ] -- ;
+    freq[str1[i] - 'a' ] ++ ;
+    freq[str2[i] - 'a' ] -- ;
 
     } 
 
@@ -40,8 +40,8 @@ int main() {
 
 
 
-string str1 = "book" ;
-string str2 = "koob" ;
+string str1 = "book!" ;
+string str2 = "koob!" ;
 
 
 if(isAnagram(str1,str2)) {
